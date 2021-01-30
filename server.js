@@ -8,6 +8,10 @@ app.get("/", (req, res) => {
     res.end();
 })
 
-app.listen(3003, () => {
-    console.log("Server is listening on 3003");
-})
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('Press Ctrl+C to quit.');
+});
+
+module.exports = app;
