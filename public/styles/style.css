@@ -1,512 +1,501 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'poppins';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "poppins";
 }
 
-
-body{
-    width: 100%;
-    height: 100vh;
-    background: #3E4C5E;
-}
-
-#bg{
-    background-image: url("../assets/homebg.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    opacity: 0.3;
-}
-
-
-header{
-    min-height: 100vh;
-    position: relative;
-    z-index: -1;
-    font-weight: 600;
-}
-
-
-
-section{
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
+h1{
+    font-size: 65px;
     font-weight: 500;
-    color: white;
 }
 
-footer{
-    background: #3E4C5E;
-    height: auto;
-    color: white;
-    font-size: 15px;
-    text-align: center;
+body {
+	width: 100%;
+	height: 100vh;
+	background: #3e4c5e;
 }
 
-.boldtext{
-    font-weight: bolder;
-    align-items: unset;
-}
-#about{
-    background-image: linear-gradient(to right top, #67798e, #5c6d82, #526276, #48576a, #3e4c5e);
-}
-
-#about h1{
-    position: relative;
-    left: 10%;
-    transform: translate(-10%);
-    width: 35%;
-    min-width: 500px;
-    margin-bottom: 1%;
-    font-size: 70px;
+#bg {
+	background-image: url("../assets/homebg.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	opacity: 0.3;
 }
 
-#about div div svg{
-    position: absolute;
-    left: 45%;
+header {
+	min-height: 100vh;
+	position: relative;
+	z-index: -1;
+	font-weight: 600;
+}
+
+section {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	color: white;
+}
+
+footer {
+	background: #3e4c5e;
+	height: auto;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+}
+
+.boldtext {
+	font-weight: bolder;
+	align-items: unset;
+}
+#about {
+	background-image: linear-gradient(
+		to right top,
+		#67798e,
+		#5c6d82,
+		#526276,
+		#48576a,
+		#3e4c5e
+    );
+}
+
+#about h1 {
+	position: relative;
+	left: 10%;
+	transform: translate(-10%);
+	width: 35%;
+	min-width: 500px;
+	margin-bottom: 1%;
+}
+
+#about div div svg {
+	position: absolute;
+	left: 45%;
     top: 10%;
+    transform: translateX(-20%);
+    width: 92%;
 }
 
-#about-intro{
-    font-weight: 600;
-    margin-bottom: 2%;
+#about-intro {
+	font-weight: 500;
+	margin-bottom: 2%;
 }
 
-#about-main{
-    font-weight: 300;
+#about-main {
+	font-weight: 300;
 }
 
-#about div{
-    color: transparent;
-    
+#about div {
+	color: transparent;
 }
 
-#about div p{
-    position: relative;
-    left: 10%;
-    transform: translate(-10%);
-    font-size: 20px;
-    text-align: justify;
-    width: 35%;
-    min-width: 500px;
-    /* justify-content: center; */
+#about div p {
+	position: relative;
+	left: 10%;
+	transform: translate(-10%);
+	text-align: justify;
+	width: 35%;
+	min-width: 500px;
     font-size: 30px;
-    /* color: transparent; */
 }
 
-.fadeAnim{
-    animation: fadeText 3s ease forwards;
+.fadeAnim {
+	animation: fadeText 3s ease forwards;
 }
 
-#subjects{
-    background-image: linear-gradient(to bottom, #f18805, #f49512, #f7a11e, #faae2a, #fdba35);
-    align-items: center;
+#subjects {
+	/* background-image: linear-gradient(
+		to bottom,
+		#f18805,
+		#f49512,
+		#f7a11e,
+		#faae2a,
+		#fdba35
+	); */
+	align-items: center;
 }
 
-#subjects h1{
-    position: relative;
-    text-align: center;
+#subjects h1 {
+	position: relative;
+	text-align: center;
     margin-bottom: 1%;
 }
 
-#subjects p{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 80%;
-    text-align: center;
-    margin-bottom: 3%;
-    font-size: 30px;
-    font-weight: 300;
+#subjects p {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	width: 80%;
+	text-align: center;
+	margin-bottom: 3%;
+	font-size: 30px;
+	font-weight: 300;
 }
 
-#subjects div div{
-    position: inline-block;
-    width: 90%;
-    text-align: center;
-    margin: auto;
+#subjects div div {
+	position: inline-block;
+	width: 90%;
+	text-align: center;
+	margin: auto;
 }
 
-#subjects div div svg{
-    margin-right: 1%;
-
+#subjects div div svg {
+	margin-right: 1%;
 }
 
-#contact{
-    background-color: #fdba35;
+#contact {
+	background-color: #fdba35;
 }
 
-#contact h1{
-    min-width: 350px;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -25%);
+#contact h1 {
+	min-width: 350px;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -25%);
 }
 
-#contact #field-wrapper{
-    /* background-color: green; */
-    height: 50vh;
-    width: 40%;
-    max-width: 750px;
-    min-width: 350px;
-    position: absolute;
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+#contact #field-wrapper {
+	/* background-color: green; */
+	height: 50vh;
+	width: 40%;
+	max-width: 750px;
+	min-width: 350px;
+	position: absolute;
+	display: grid;
+	grid-template-rows: 1fr 2fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-#contact .field-name-email{
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
+#contact .field-name-email {
+	align-items: center;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
-#contact .field-name-email input{
-    font-size: 2vh;
-    width: 100%;
-    height: 6vh;
-    border-radius: 8px;
-    box-shadow: none;
-    border-color: white;
-    border-style: none;
-    padding: 3%;
+#contact .field-name-email input {
+	font-size: 20px;
+	width: 100%;
+	height: 6vh;
+	border-radius: 8px;
+	box-shadow: none;
+	border-color: white;
+	border-style: none;
+	padding: 3%;
 }
 
-#contact #field-name{
-    margin-right: 5%;
+#contact #field-name {
+	margin-right: 5%;
 }
 
-#contact #field-name :placeholder-shown{
-    padding-left: 3%;
+#contact #field-name :placeholder-shown {
+	padding-left: 3%;
 }
 
-#contact #field-email{
-    margin-left: 5%;
+#contact #field-email {
+	margin-left: 5%;
 }
 
-#contact #field-email ::placeholder{
-    padding-left: 3%;
+#contact #field-email ::placeholder {
+	padding-left: 3%;
 }
 
-#contact #field-message{
+#contact #field-message {
+	grid-column: 1/3;
+}
+
+#contact #field-message textarea {
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	border-radius: 8px;
+	box-shadow: none;
+	border-color: white;
+	padding: 2%;
+	resize: none;
+}
+
+#contact #field-wrapper div :focus {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+		0 0 8px rgba(102, 175, 233, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+		0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+#contact #submit-wrapper {
     grid-column: 1/3;
+    margin-top: 2vh;
 }
 
-#contact #field-message textarea{
-    width: 100%;
-    height: 100%;   
-    font-size: 2vh;
-    border-radius: 8px;
-    box-shadow: none;
-    border-color: white;
-    padding: 2%;
-    resize: none;
+#contact ul li {
+	list-style: none;
+	display: inline;
 }
 
-#contact #field-wrapper div :focus{
-    border-color: #66afe9;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+#contact ul {
+	margin-top: 1vh;
 }
 
-#contact #submit-wrapper{
-    grid-column: 1/3;
-}
-
-#contact ul li{
-    list-style: none;
-    display: inline;
-}
-
-#contact ul{
-    margin-top: 1vh;
-}
-
-#contact ul li input{
-    width: 15%;
+#contact ul li input {
+	width: 15%;
     height: 4vh;
-    background-color: slategray;
-    color: white;
-    border-radius: 8px;
-    border-style: none;
-    font-size: 50%;
-    min-width: 100px;
+    min-height: 40px;
+	background-color: slategray;
+	color: white;
+	border-radius: 8px;
+	border-style: none;
+	font-size: 20px;
+	min-width: 100px;
 }
 
-#contact ul li #reset{
-    background-color: #d95d39;
-    float: left;
+#contact ul li #reset {
+	background-color: #d95d39;
+	float: left;
 }
 
-#contact ul #submit{
-    float: right;
+#contact ul #submit {
+	float: right;
 }
 
-#subtitle{
-    position: absolute;
-    top: 57%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: lighter;
-    color: transparent;
-    animation: fadeText 2s ease forwards 4s;
+#subtitle {
+	position: absolute;
+	top: 57%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: lighter;
+	color: transparent;
+	animation: fadeText 2s ease forwards 4s;
 }
 
-#logo{
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+#logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-#logoFill{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fill 1.5s ease forwards 4s;
+#logoFill {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: fill 1.5s ease forwards 4s;
 }
 
-#logo path:nth-child(2){
-    stroke-dasharray: 315;
-    stroke-dashoffset: 315;
-    animation: line-anim 1.75s ease forwards;
-    stroke-width: 2;
+#logo path:nth-child(2) {
+	stroke-dasharray: 315;
+	stroke-dashoffset: 315;
+	animation: line-anim 1.75s ease forwards;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(3){
-    stroke-dasharray: 141.5;
-    stroke-dashoffset: 141.5;
-    animation: line-anim 1.75s ease forwards 0.5s;
-    stroke-width: 2;
+#logo path:nth-child(3) {
+	stroke-dasharray: 141.5;
+	stroke-dashoffset: 141.5;
+	animation: line-anim 1.75s ease forwards 0.5s;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(4){
-    stroke-dasharray: 62.1;
-    stroke-dashoffset: 62.1;
-    animation: line-anim 1.75s ease forwards 0.7s;
-    stroke-width: 2;
+#logo path:nth-child(4) {
+	stroke-dasharray: 62.1;
+	stroke-dashoffset: 62.1;
+	animation: line-anim 1.75s ease forwards 0.7s;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(5){
-    stroke-dasharray: 134;
-    stroke-dashoffset: 134;
-    animation: line-anim 1.75s ease forwards 0.9s;
-    stroke-width: 2;
-
+#logo path:nth-child(5) {
+	stroke-dasharray: 134;
+	stroke-dashoffset: 134;
+	animation: line-anim 1.75s ease forwards 0.9s;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(6){
-    stroke-dasharray: 55;
-    stroke-dashoffset: 55;
-    animation: line-anim 1.75s ease forwards 1.1s;
-    stroke-width: 2;
-
+#logo path:nth-child(6) {
+	stroke-dasharray: 55;
+	stroke-dashoffset: 55;
+	animation: line-anim 1.75s ease forwards 1.1s;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(7){
-    stroke-dasharray: 395;
-    stroke-dashoffset: 395;
-    animation: line-anim 1.75s ease forwards 1.3s;
-    stroke-width: 2;
-
+#logo path:nth-child(7) {
+	stroke-dasharray: 395;
+	stroke-dashoffset: 395;
+	animation: line-anim 1.75s ease forwards 1.3s;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(8){
-    stroke-dasharray: 175.4;
-    stroke-dashoffset: 175.4;
-    animation: line-anim 1.75s ease forwards 1.5s;
-    stroke-width: 2;
-
+#logo path:nth-child(8) {
+	stroke-dasharray: 175.4;
+	stroke-dashoffset: 175.4;
+	animation: line-anim 1.75s ease forwards 1.5s;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(9){
-    stroke-dasharray: 141.5;
-    stroke-dashoffset: 141.5;
-    animation: line-anim 1.75s ease forwards 1.7s;
-    stroke-width: 2;
-
+#logo path:nth-child(9) {
+	stroke-dasharray: 141.5;
+	stroke-dashoffset: 141.5;
+	animation: line-anim 1.75s ease forwards 1.7s;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(10){
-    stroke-dasharray: 250;
-    stroke-dashoffset: 250;
-    animation: line-anim 1.75s ease forwards 1.9s;
-    stroke-width: 2;
-
+#logo path:nth-child(10) {
+	stroke-dasharray: 250;
+	stroke-dashoffset: 250;
+	animation: line-anim 1.75s ease forwards 1.9s;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(11){
-    stroke-dasharray: 331;
-    stroke-dashoffset: 331;
-    animation: line-anim 1.75s ease forwards 2.1s;
-    stroke-width: 2;
-
+#logo path:nth-child(11) {
+	stroke-dasharray: 331;
+	stroke-dashoffset: 331;
+	animation: line-anim 1.75s ease forwards 2.1s;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(12){
-    stroke-dasharray: 304;
-    stroke-dashoffset: 304;
-    animation: line-anim 1.75s ease forwards 2.3s;
-    stroke-width: 2;
-
+#logo path:nth-child(12) {
+	stroke-dasharray: 304;
+	stroke-dashoffset: 304;
+	animation: line-anim 1.75s ease forwards 2.3s;
+	stroke-width: 2;
 }
 
-#logo path:nth-child(13){
-    stroke-dasharray: 249;
-    stroke-dashoffset: 249;
-    animation: line-anim 1.75s ease forwards 2.5s;
-    stroke-width: 2;
-
+#logo path:nth-child(13) {
+	stroke-dasharray: 249;
+	stroke-dashoffset: 249;
+	animation: line-anim 1.75s ease forwards 2.5s;
+	stroke-width: 2;
 }
 
-@keyframes line-anim{
-    to{
-        stroke-dashoffset: 0;
-    }
+@keyframes line-anim {
+	to {
+		stroke-dashoffset: 0;
+	}
 }
 
-@keyframes fill{
-    from{
-        fill: transparent;
-    }
-    to{
-        fill: white;
-    }
+@keyframes fill {
+	from {
+		fill: transparent;
+	}
+	to {
+		fill: white;
+	}
 }
 
-@keyframes fadeText{
-    from{
-        color: transparent;
-    }
-    to{
-        color: white;
-    }
+@keyframes fadeText {
+	from {
+		color: transparent;
+	}
+	to {
+		color: white;
+	}
 }
-
 
 @media only screen and (max-width: 1500px) {
-    #about div div svg{
-        position: absolute;
-        left: 0%;
-        top: 90%;
-    }
-
-    #about div p{
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        font-size: 20px;
-        text-align: justify;
-        width: 35%;
-        min-width: 500px;
-        /* justify-content: center; */
-        font-size: 25px;
-        /* color: transparent; */
-    }
-
-    #about svg{
-        top: 0;
-        left: 0;
-        width: 1%;
-    }
-
-    #about h1{
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        width: 35%;
-        min-width: 500px;
-        margin-bottom: 1%;
+    h1{
         font-size: 40px;
         text-align: center;
     }
 
-    #subjects svg{
+    p{
+        font-size: 25px;
+    }
+
+    header h2 {
+		width: 100%;
+		text-align: center;
+    }
+
+	#about div div svg {
+		position: absolute;
+		left: 0%;
+		top: 90%;
+	}
+
+	#about div p {
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+		text-align: justify;
+		width: 35%;
+	}
+
+	#about svg {
+		top: 0;
+		left: 0;
+		width: 1%;
+	}
+
+	#about h1 {
+        width: 100%;
+	}
+
+    #subjects div div{
+        width: 60%;
+    }
+
+	#subjects svg {
         width: 40%;
-        max-width: 300px;
-        height: auto;
-    }
+        min-width: 260px;
+		max-width: 300px;
+		height: auto;
+	}
 
-    header h2{
-        width: 100%;
-        text-align: center;
-    }
+	#contact h1 {
+		text-align: center;
+		font-size: 40px;
+		width: 100%;
+	}
+}
 
-    #contact h1{
-        text-align: center;
-        font-size: 40px;
-        width: 100%;
-    }
-
-    #subjects p{
-        font-size: 25px;
+@media only screen and (max-width: 900px) {
+    #subjects div div{
+        width: 90%;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    #about div p{
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        font-size: 20px;
-        width: 35%;
-        min-width: 300px;
-        text-align: center;
-        font-size: 20px;
-
-    }
-
-    #about h1{
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        width: 35%;
-        min-width: 500px;
-        margin-bottom: 1%;
+    h1{
         font-size: 40px;
         text-align: center;
+    }
+
+    #about div p{
+        text-align: center;
+        font-size: 25px;
     }
 
     #subjects p{
-        font-size: 20px;
+        font-size: 25px;
     }
 
-    #subjects h1{
-        font-size: 40px;
-    }
-
-    #subjects svg{
-        width: 42%;
-        height: auto;
-    }
-
-    #contact h1{
-        font-size: 40px;
-        text-align: center;
-    }
-
-    header svg{
-        width: 80%;
-    }
-
-    header h2{
-        font-size: 18px;
-        text-align: center;
+    #subjects div div{
         width: 100%;
     }
-}
 
+	#subjects svg {
+		width: 42%;
+        height: auto;
+        min-width: unset;
+	}
+
+	header svg {
+		width: 80%;
+	}
+
+	header h2 {
+		font-size: 18px;
+		text-align: center;
+		width: 100%;
+    }
+}
