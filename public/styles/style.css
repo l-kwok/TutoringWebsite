@@ -101,7 +101,7 @@ footer {
 	transform: translate(-10%);
 	text-align: justify;
 	width: 35%;
-	min-width: 500px;
+	min-width: 400px;
     font-size: 30px;
 }
 
@@ -433,7 +433,6 @@ footer {
 	#about svg {
 		top: 0;
 		left: 0;
-		width: 1%;
 	}
 
 	#about h1 {
@@ -490,11 +489,11 @@ footer {
 	}
 
 	header svg {
-		width: 80%;
+		width: 75%;
 	}
 
 	header h2 {
-		font-size: 18px;
+		font-size: 16px;
 		text-align: center;
 		width: 100%;
     }
