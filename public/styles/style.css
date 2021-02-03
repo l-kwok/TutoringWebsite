@@ -32,6 +32,36 @@ header {
 	font-weight: 600;
 }
 
+#subtitle {
+	position: absolute;
+	top: 57%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: 300;
+	color: transparent;
+}
+
+.subtitleMobile{
+    position: absolute;
+	top: 57%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    color: transparent;
+    text-align: center;
+}
+
+header #arrow{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -95%);
+    height: 5vh;
+    z-index: 1;
+    animation: bounce 2s ease forwards;
+    animation-iteration-count: infinite;
+}
+
 section {
 	position: relative;
 	min-height: 100vh;
@@ -55,14 +85,16 @@ footer {
 	align-items: unset;
 }
 #about {
-	background-image: linear-gradient(
+	/* background-image: linear-gradient(
 		to right top,
 		#67798e,
 		#5c6d82,
 		#526276,
 		#48576a,
 		#3e4c5e
-    );
+    ); */
+    /* background-color: #0d1b2a; */
+    background-image: linear-gradient(to bottom, #0d1b2a, #101e2e, #142132, #172337, #1b263b);
 }
 
 #about h1 {
@@ -117,7 +149,9 @@ footer {
 		#f7a11e,
 		#faae2a,
 		#fdba35
-	); */
+    ); */
+    /* background-color: #1b263b; */
+    background-image: linear-gradient(to bottom, #1b263b, #243249, #2e3f58, #374c67, #415a77);
 	align-items: center;
 }
 
@@ -139,7 +173,6 @@ footer {
 }
 
 #subjects div div {
-	position: inline-block;
 	width: 90%;
 	text-align: center;
 	margin: auto;
@@ -149,8 +182,8 @@ footer {
 	margin-right: 1%;
 }
 
-#contact {
-	background-color: #fdba35;
+#contact{
+    background-color: #415a77;
 }
 
 #contact h1 {
@@ -162,15 +195,11 @@ footer {
 }
 
 #contact #field-wrapper {
-	/* background-color: green; */
 	height: 50vh;
 	width: 40%;
 	max-width: 750px;
 	min-width: 350px;
 	position: absolute;
-	display: grid;
-	grid-template-rows: 1fr 2fr 1fr;
-	grid-template-columns: 1fr 1fr;
 	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -185,32 +214,19 @@ footer {
 #contact .field-name-email input {
 	font-size: 20px;
 	width: 100%;
-	height: 6vh;
+    height: 6vh;
+    min-height: 50px;
 	border-radius: 8px;
 	box-shadow: none;
 	border-color: white;
 	border-style: none;
-	padding: 3%;
-}
-
-#contact #field-name {
-	margin-right: 5%;
+    padding: 3%;
+    margin-top: 4%;
+    
 }
 
 #contact #field-name :placeholder-shown {
 	padding-left: 3%;
-}
-
-#contact #field-email {
-	margin-left: 5%;
-}
-
-#contact #field-email ::placeholder {
-	padding-left: 3%;
-}
-
-#contact #field-message {
-	grid-column: 1/3;
 }
 
 #contact #field-message textarea {
@@ -220,9 +236,11 @@ footer {
 	border-radius: 8px;
 	box-shadow: none;
 	border-color: white;
-	padding: 2%;
+    padding: 3%;
+    margin-top: 4%;
 	resize: none;
 }
+
 
 #contact #field-wrapper div :focus {
 	border-color: #66afe9;
@@ -268,15 +286,24 @@ footer {
 	float: right;
 }
 
-#subtitle {
-	position: absolute;
-	top: 57%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-weight: lighter;
-	color: transparent;
-	animation: fadeText 2s ease forwards 4s;
+#contact #commentBubbleLeft{
+    position: absolute;
+    left: 20%;
+    top: 34%;
+    transform: translate(-34%, -20%);
+    width: 18vh;
+
 }
+
+#contact #commentBubbleRight{
+    position: absolute;
+    left: 80%;
+    top: 75%;
+    transform: translate(-75%, -80%);
+    width: 18vh;
+}
+
+
 
 #logo {
 	position: absolute;
@@ -377,6 +404,12 @@ footer {
 	stroke-width: 2;
 }
 
+@keyframes bounce{
+    0%   {top: 95%;}
+    50%  {top: 93%;}
+    100% {top: 95%;}
+}
+
 @keyframes line-anim {
 	to {
 		stroke-dashoffset: 0;
@@ -454,7 +487,11 @@ footer {
 		text-align: center;
 		font-size: 40px;
 		width: 100%;
-	}
+    }
+
+    #contact svg{
+        z-index: -2;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -492,9 +529,24 @@ footer {
 		width: 75%;
 	}
 
-	header h2 {
-		font-size: 16px;
+	/* header h2 {
+		font-size: 20px;
 		text-align: center;
 		width: 100%;
+    } */
+
+    #subtitle{
+        color: transparent;
+        animation: none;
+    }
+
+    .subtitleMobile{
+        color: white;
+    }
+}
+
+@media only screen and (max-height: 650px){
+    #contact{
+        height: 150vh;
     }
 }
