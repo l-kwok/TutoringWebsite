@@ -404,36 +404,6 @@ footer {
 	stroke-width: 2;
 }
 
-@keyframes bounce{
-    0%   {top: 95%;}
-    50%  {top: 93%;}
-    100% {top: 95%;}
-}
-
-@keyframes line-anim {
-	to {
-		stroke-dashoffset: 0;
-	}
-}
-
-@keyframes fill {
-	from {
-		fill: transparent;
-	}
-	to {
-		fill: white;
-	}
-}
-
-@keyframes fadeText {
-	from {
-		color: transparent;
-	}
-	to {
-		color: white;
-	}
-}
-
 @media only screen and (max-width: 1500px) {
     h1{
         font-size: 40px;
@@ -529,11 +499,6 @@ footer {
 		width: 75%;
 	}
 
-	/* header h2 {
-		font-size: 20px;
-		text-align: center;
-		width: 100%;
-    } */
 
     #subtitle{
         color: transparent;
@@ -542,6 +507,24 @@ footer {
 
     .subtitleMobile{
         color: white;
+        top: 60%;
+    }
+
+    header #arrow{
+        animation: bounceMobile 1s ease forwards;
+        animation-iteration-count: infinite;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #about div p{
+        text-align: center;
+        font-size: 18px;
+        min-width: 300px;
+    }
+
+    #subjects p{
+        font-size: 18px;
     }
 }
 
@@ -549,4 +532,40 @@ footer {
     #contact{
         height: 150vh;
     }
+}
+
+@keyframes bounce{
+    0%   {top: 95%;}
+    50%  {top: 93%;}
+    100% {top: 95%;}
+}
+
+@keyframes bounceMobile{
+    0%   {top: 85%;}
+    50%  {top: 83%;}
+    100% {top: 85%;}
+}
+
+@keyframes line-anim {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes fill {
+	from {
+		fill: transparent;
+	}
+	to {
+		fill: white;
+	}
+}
+
+@keyframes fadeText {
+	from {
+		color: transparent;
+	}
+	to {
+		color: white;
+	}
 }
