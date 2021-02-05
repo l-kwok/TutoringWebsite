@@ -1,3 +1,7 @@
+var burger = document.querySelector(".burger");
+var nav = document.querySelector(".nav-links");
+var navLinks = document.querySelectorAll(".nav-links li");
+
 function parallax(element, distance, speed) {
 	const item = document.querySelector(element);
 
@@ -5,9 +9,7 @@ function parallax(element, distance, speed) {
 }
 
 const navSlide = () => {
-	const burger = document.querySelector(".burger");
-	const nav = document.querySelector(".nav-links");
-	const navLinks = document.querySelectorAll(".nav-links li");
+
 	//Toggle Nav
 	burger.addEventListener("click", () => {
 		nav.classList.toggle("nav-active");
@@ -29,15 +31,26 @@ const navSlide = () => {
 };
 
 navSlide();
-
+var prevScrollpos = window.scrollY;
 window.addEventListener("scroll", function () {
 	let scrollAmount = document.querySelector("header").offsetHeight;
+	//fade animation for about page
 	if (window.scrollY > scrollAmount - 350) {
 		$("#about div").addClass("fadeAnim");
 	}
+
+	var currentScrollPos = window.scrollY;
+	if (prevScrollpos > currentScrollPos) {
+		document.getElementById("navbar").style.top = "0";
+	} else {
+		document.getElementById("navbar").style.top = "-60px";
+	}
+	prevScrollpos = currentScrollPos;
+
 });
 
 $(document).ready(function () {
+	//scroll to section animation
 	$("a").on("click", function (event) {
 		if (this.hash !== "") {
 			event.preventDefault();
@@ -51,10 +64,23 @@ $(document).ready(function () {
 				500,
 				function () {
 					window.location.hash = hash;
-          navSlide();
 
 				}
 			);
+
+			nav.classList.toggle("nav-active");
+	
+			navLinks.forEach((link, index) => {
+				if (link.style.animation) {
+					link.style.animation = "";
+				} else {
+					link.style.animation = `navLinkFade 0.5s ease forwards ${
+						index / 7 + 0.5
+					}s`;
+				}
+			});
+	
+			burger.classList.toggle("toggle");
 		}
 	});
 });

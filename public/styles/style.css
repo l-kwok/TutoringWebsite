@@ -5,12 +5,17 @@
 	font-family: "poppins";
 }
 
-h1{
-    font-size: 65px;
-    font-weight: 500;
+h1 {
+	font-size: 65px;
+	font-weight: 500;
 }
 
-nav{
+a{
+	text-decoration: none;
+	color: white;
+}
+
+nav {
 	display: flex;
 	position: fixed;
 	color: white;
@@ -24,9 +29,9 @@ nav{
 	background-color: #3e4c5e;
 }
 
-nav ul li a:hover{
-	color:lightgray;
-} 
+nav ul li a:hover {
+	color: lightgray;
+}
 
 .toggle .line1 {
 	transform: rotate(-45deg) translate(-5px, 5px);
@@ -35,7 +40,7 @@ nav ul li a:hover{
 	opacity: 0;
 }
 .toggle .line3 {
-	transform: rotate(45deg) translate(-5px,-6px);
+	transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .nav-links {
@@ -56,8 +61,6 @@ nav ul li a:hover{
 	font-size: 20px;
 }
 
-
-
 .burger {
 	display: none;
 	cursor: pointer;
@@ -65,12 +68,12 @@ nav ul li a:hover{
 	right: 5%;
 }
 
-.burger div{
+.burger div {
 	width: 30px;
 	height: 2px;
 	background-color: white;
-    margin: 5px;
-    transition: all 0.3s ease;
+	margin: 5px;
+	transition: all 0.3s ease;
 }
 
 body {
@@ -104,25 +107,25 @@ header {
 	color: transparent;
 }
 
-.subtitleMobile{
-    position: absolute;
+.subtitleMobile {
+	position: absolute;
 	top: 57%;
 	left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 300;
-    color: transparent;
-    text-align: center;
+	transform: translate(-50%, -50%);
+	font-weight: 300;
+	color: transparent;
+	text-align: center;
 }
 
-header #arrow{
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -95%);
-    height: 5vh;
-    z-index: 1;
-    animation: bounce 2s ease forwards;
-    animation-iteration-count: infinite;
+header #arrow {
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	transform: translate(-50%, -95%);
+	height: 5vh;
+	z-index: 1;
+	animation: bounce 2s ease forwards;
+	animation-iteration-count: infinite;
 }
 
 section {
@@ -148,16 +151,14 @@ footer {
 	align-items: unset;
 }
 #about {
-	/* background-image: linear-gradient(
-		to right top,
-		#67798e,
-		#5c6d82,
-		#526276,
-		#48576a,
-		#3e4c5e
-    ); */
-    /* background-color: #0d1b2a; */
-    background-image: linear-gradient(to bottom, #0d1b2a, #101e2e, #142132, #172337, #1b263b);
+	background-image: linear-gradient(
+		to bottom,
+		#0d1b2a,
+		#101e2e,
+		#142132,
+		#172337,
+		#1b263b
+	);
 }
 
 #about h1 {
@@ -170,11 +171,11 @@ footer {
 }
 
 #about div div svg {
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    transform: translate(-100%, -50%);
-    width: 50%;
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	transform: translate(-100%, -50%);
+	width: 50%;
 }
 
 #about-intro {
@@ -197,7 +198,7 @@ footer {
 	text-align: justify;
 	width: 35%;
 	min-width: 400px;
-    font-size: 30px;
+	font-size: 23px;
 }
 
 .fadeAnim {
@@ -205,23 +206,21 @@ footer {
 }
 
 #subjects {
-	/* background-image: linear-gradient(
+	background-image: linear-gradient(
 		to bottom,
-		#f18805,
-		#f49512,
-		#f7a11e,
-		#faae2a,
-		#fdba35
-    ); */
-    /* background-color: #1b263b; */
-    background-image: linear-gradient(to bottom, #1b263b, #243249, #2e3f58, #374c67, #415a77);
+		#1b263b,
+		#243249,
+		#2e3f58,
+		#374c67,
+		#415a77
+	);
 	align-items: center;
 }
 
 #subjects h1 {
 	position: relative;
 	text-align: center;
-    margin-bottom: 1%;
+	margin-bottom: 1%;
 }
 
 #subjects p {
@@ -231,7 +230,7 @@ footer {
 	width: 80%;
 	text-align: center;
 	margin-bottom: 3%;
-	font-size: 30px;
+	font-size: 23px;
 	font-weight: 300;
 }
 
@@ -243,10 +242,11 @@ footer {
 
 #subjects div div svg {
 	margin-right: 1%;
+	max-width: 250px;
 }
 
-#contact{
-    background-color: #415a77;
+#contact {
+	background-color: #415a77;
 }
 
 #contact h1 {
@@ -277,15 +277,14 @@ footer {
 #contact .field-name-email input {
 	font-size: 20px;
 	width: 100%;
-    height: 6vh;
-    min-height: 50px;
+	height: 6vh;
+	min-height: 50px;
 	border-radius: 8px;
 	box-shadow: none;
 	border-color: white;
 	border-style: none;
-    padding: 3%;
-    margin-top: 4%;
-    
+	padding: 3%;
+	margin-top: 4%;
 }
 
 #contact #field-name :placeholder-shown {
@@ -299,11 +298,10 @@ footer {
 	border-radius: 8px;
 	box-shadow: none;
 	border-color: white;
-    padding: 3%;
-    margin-top: 4%;
+	padding: 3%;
+	margin-top: 4%;
 	resize: none;
 }
-
 
 #contact #field-wrapper div :focus {
 	border-color: #66afe9;
@@ -315,8 +313,8 @@ footer {
 }
 
 #contact #submit-wrapper {
-    grid-column: 1/3;
-    margin-top: 2vh;
+	grid-column: 1/3;
+	margin-top: 2vh;
 }
 
 #contact ul li {
@@ -330,8 +328,8 @@ footer {
 
 #contact ul li input {
 	width: 15%;
-    height: 4vh;
-    min-height: 40px;
+	height: 4vh;
+	min-height: 40px;
 	background-color: slategray;
 	color: white;
 	border-radius: 8px;
@@ -349,24 +347,21 @@ footer {
 	float: right;
 }
 
-#contact #commentBubbleLeft{
-    position: absolute;
-    left: 20%;
-    top: 34%;
-    transform: translate(-34%, -20%);
-    width: 18vh;
-
+#contact #commentBubbleLeft {
+	position: absolute;
+	left: 20%;
+	top: 34%;
+	transform: translate(-34%, -20%);
+	width: 18vh;
 }
 
-#contact #commentBubbleRight{
-    position: absolute;
-    left: 80%;
-    top: 75%;
-    transform: translate(-75%, -80%);
-    width: 18vh;
+#contact #commentBubbleRight {
+	position: absolute;
+	left: 80%;
+	top: 75%;
+	transform: translate(-75%, -80%);
+	width: 18vh;
 }
-
-
 
 #logo {
 	position: absolute;
@@ -468,19 +463,19 @@ footer {
 }
 
 @media only screen and (max-width: 1500px) {
-    h1{
-        font-size: 40px;
-        text-align: center;
-    }
+	h1 {
+		font-size: 40px;
+		text-align: center;
+	}
 
-    p{
-        font-size: 25px;
-    }
+	p {
+		font-size: 25px;
+	}
 
-    header h2 {
+	header h2 {
 		width: 100%;
 		text-align: center;
-    }
+	}
 
 	#about div div svg {
 		position: absolute;
@@ -502,16 +497,16 @@ footer {
 	}
 
 	#about h1 {
-        width: 100%;
+		width: 100%;
 	}
 
-    #subjects div div{
-        width: 60%;
-    }
+	#subjects div div {
+		width: 60%;
+	}
 
 	#subjects svg {
-        width: 40%;
-        min-width: 260px;
+		width: 40%;
+		min-width: 260px;
 		max-width: 300px;
 		height: auto;
 	}
@@ -520,12 +515,11 @@ footer {
 		text-align: center;
 		font-size: 40px;
 		width: 100%;
-    }
+	}
 
-    #contact svg{
-        z-index: -2;
-    }
-
+	#contact svg {
+		z-index: -2;
+	}
 
 	.nav-links {
 		width: 90%;
@@ -533,13 +527,9 @@ footer {
 }
 
 @media only screen and (max-width: 900px) {
-    #subjects div div{
-        width: 90%;
-    }
-
-	/* body {
-		overflow-x: hidden;
-	} */
+	#subjects div div {
+		width: 90%;
+	}
 	.nav-links {
 		position: absolute;
 		right: 0px;
@@ -547,10 +537,11 @@ footer {
 		top: 8vh;
 		flex-direction: column;
 		align-items: center;
-		background-color:#3e4c5e;
+		background-color: #3e4c5e;
 		width: 50%;
 		transform: translate(100%);
 		transition: transform 0.5s ease-in;
+		padding-bottom: 200px;
 	}
 	.nav-links li {
 		opacity: 0;
@@ -562,86 +553,94 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 40px;
+		text-align: center;
+	}
 
-    h1{
-        font-size: 40px;
-        text-align: center;
-    }
-
-	#about h1{
+	#about h1 {
 		min-width: 200px;
 	}
 
-    #about div p{
-        text-align: center;
-        font-size: 25px;
-    }
+	#about div p {
+		text-align: center;
+		font-size: 25px;
+	}
 
-    #subjects p{
-        font-size: 25px;
-    }
+	#subjects p {
+		font-size: 25px;
+	}
 
-    #subjects div div{
-        width: 100%;
-    }
+	#subjects div div {
+		width: 100%;
+	}
 
 	#subjects svg {
 		width: 42%;
-        height: auto;
-        min-width: unset;
+		height: auto;
+		min-width: unset;
 	}
 
 	header svg {
 		width: 75%;
 	}
 
+	#subtitle {
+		color: transparent;
+		animation: none;
+	}
 
-    #subtitle{
-        color: transparent;
-        animation: none;
-    }
+	.subtitleMobile {
+		color: white;
+		top: 60%;
+	}
 
-    .subtitleMobile{
-        color: white;
-        top: 60%;
-    }
-
-    header #arrow{
-        animation: bounceMobile 1s ease forwards;
-        animation-iteration-count: infinite;
-    }
-
-
+	header #arrow {
+		animation: bounceMobile 1s ease forwards;
+		animation-iteration-count: infinite;
+	}
 }
 
 @media only screen and (max-width: 550px) {
-    #about div p{
-        text-align: center;
-        font-size: 18px;
-        min-width: 300px;
-    }
+	#about div p {
+		text-align: center;
+		font-size: 18px;
+		min-width: 300px;
+	}
 
-    #subjects p{
-        font-size: 18px;
-    }
+	#subjects p {
+		font-size: 18px;
+	}
 }
 
-@media only screen and (max-height: 650px){
-    #contact{
-        height: 150vh;
-    }
+@media only screen and (max-height: 650px) {
+	#contact {
+		height: 150vh;
+	}
 }
 
-@keyframes bounce{
-    0%   {top: 95%;}
-    50%  {top: 93%;}
-    100% {top: 95%;}
+@keyframes bounce {
+	0% {
+		top: 95%;
+	}
+	50% {
+		top: 93%;
+	}
+	100% {
+		top: 95%;
+	}
 }
 
-@keyframes bounceMobile{
-    0%   {top: 85%;}
-    50%  {top: 83%;}
-    100% {top: 85%;}
+@keyframes bounceMobile {
+	0% {
+		top: 85%;
+	}
+	50% {
+		top: 83%;
+	}
+	100% {
+		top: 85%;
+	}
 }
 
 @keyframes line-anim {
