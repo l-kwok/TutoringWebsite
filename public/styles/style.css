@@ -15,6 +15,7 @@ a{
 	color: white;
 }
 
+
 nav {
 	display: flex;
 	position: fixed;
@@ -91,6 +92,16 @@ body {
 	opacity: 0.3;
 }
 
+#pfp{
+	width: 30%;
+	max-width: 250px;
+	min-width: 200px;
+	position: absolute;
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -30%);
+}
+
 header {
 	min-height: 100vh;
 	position: relative;
@@ -100,18 +111,18 @@ header {
 
 #subtitle {
 	position: absolute;
-	top: 57%;
+	top: 67%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -60%);
 	font-weight: 300;
 	color: transparent;
 }
 
 .subtitleMobile {
 	position: absolute;
-	top: 57%;
+	top: 67%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -60%);
 	font-weight: 300;
 	color: transparent;
 	text-align: center;
@@ -365,16 +376,16 @@ footer {
 
 #logo {
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -60%);
 }
 
 #logoFill {
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -60%);
 	animation: fill 1.5s ease forwards 4s;
 }
 
@@ -592,7 +603,7 @@ footer {
 
 	.subtitleMobile {
 		color: white;
-		top: 60%;
+		top: 68%;
 	}
 
 	header #arrow {
