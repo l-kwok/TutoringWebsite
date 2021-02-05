@@ -1,44 +1,60 @@
-function parallax(element, distance, speed){
-    const item = document.querySelector(element);
+function parallax(element, distance, speed) {
+	const item = document.querySelector(element);
 
-    item.style.transform = `translateY(${distance * speed}px)`;
+	item.style.transform = `translateY(${distance * speed}px)`;
 }
 
-window.addEventListener('scroll', function(){
-    // parallax('header', window.scrollY, 1);
-    // parallax('#bg', window.scrollY, 1);
+const navSlide = () => {
+	const burger = document.querySelector(".burger");
+	const nav = document.querySelector(".nav-links");
+	const navLinks = document.querySelectorAll(".nav-links li");
+	//Toggle Nav
+	burger.addEventListener("click", () => {
+		nav.classList.toggle("nav-active");
 
+		//Animate Links
+		navLinks.forEach((link, index) => {
+			if (link.style.animation) {
+				link.style.animation = "";
+			} else {
+				link.style.animation = `navLinkFade 0.5s ease forwards ${
+					index / 7 + 0.5
+				}s`;
+			}
+		});
 
-    let scrollAmount = document.querySelector('header').offsetHeight;
-    // document.querySelector('#about').style.fill = `white`;
+		//Burger Animation
+		burger.classList.toggle("toggle");
+	});
+};
 
-    //delay for fade in text for about
-    if(window.scrollY > scrollAmount - 350){
-        $("#about div").addClass("fadeAnim");
-    }
+navSlide();
 
-    // if(window.scrollY > scrollAmount){
-    //     parallax('#about', window.scrollY - document.querySelector('header').offsetHeight, 1);
-    //     scrollAmount += document.querySelector('header').offsetHeight;
-    // }
+window.addEventListener("scroll", function () {
+	let scrollAmount = document.querySelector("header").offsetHeight;
+	if (window.scrollY > scrollAmount - 350) {
+		$("#about div").addClass("fadeAnim");
+	}
+});
 
-    // if(window.scrollY > scrollAmount){
-    //     parallax('#subjects', window.scrollY - scrollAmount, 1);
-    //     scrollAmount += document.querySelector('#about').offsetHeight;
-    // }
+$(document).ready(function () {
+	$("a").on("click", function (event) {
+		if (this.hash !== "") {
+			event.preventDefault();
 
-    // if(window.scrollY >= scrollAmount){
-    //     parallax('#contact', window.scrollY - scrollAmount, 1);
-    //     scrollAmount += document.querySelector('footer').offsetHeight;
-    // }
+			var hash = this.hash;
 
-    // if(window.scrollY >= scrollAmount){
-    //     parallax('footer', window.scrollY - scrollAmount, 1);
-    //     // window.scrollY = 0;
-    // }
-    // console.log(scrollAmount);
+			$("html, body").animate(
+				{
+					scrollTop: $(hash).offset().top,
+				},
+				500,
+				function () {
+					window.location.hash = hash;
+          navSlide();
 
-
-    
-
-})
+				}
+			);
+		}
+	});
+});

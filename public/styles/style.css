@@ -10,6 +10,69 @@ h1{
     font-weight: 500;
 }
 
+nav{
+	display: flex;
+	position: fixed;
+	color: white;
+	width: 100%;
+	min-height: 8vh;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 30px;
+	transition: top 0.3s;
+	z-index: 3;
+	background-color: #3e4c5e;
+}
+
+nav ul li a:hover{
+	color:lightgray;
+} 
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 5px);
+}
+.toggle .line2 {
+	opacity: 0;
+}
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+}
+
+.nav-links {
+	list-style: none;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: 300;
+	font-size: 20px;
+}
+
+
+
+.burger {
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	right: 5%;
+}
+
+.burger div{
+	width: 30px;
+	height: 2px;
+	background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
 body {
 	width: 100%;
 	height: 100vh;
@@ -462,19 +525,52 @@ footer {
     #contact svg{
         z-index: -2;
     }
+
+
+	.nav-links {
+		width: 90%;
+	}
 }
 
 @media only screen and (max-width: 900px) {
     #subjects div div{
         width: 90%;
     }
+
+	/* body {
+		overflow-x: hidden;
+	} */
+	.nav-links {
+		position: absolute;
+		right: 0px;
+		height: 100vh;
+		top: 8vh;
+		flex-direction: column;
+		align-items: center;
+		background-color:#3e4c5e;
+		width: 50%;
+		transform: translate(100%);
+		transition: transform 0.5s ease-in;
+	}
+	.nav-links li {
+		opacity: 0;
+	}
+
+	.burger {
+		display: block;
+	}
 }
 
 @media only screen and (max-width: 600px) {
+
     h1{
         font-size: 40px;
         text-align: center;
     }
+
+	#about h1{
+		min-width: 200px;
+	}
 
     #about div p{
         text-align: center;
@@ -514,6 +610,8 @@ footer {
         animation: bounceMobile 1s ease forwards;
         animation-iteration-count: infinite;
     }
+
+
 }
 
 @media only screen and (max-width: 550px) {
@@ -568,4 +666,19 @@ footer {
 	to {
 		color: white;
 	}
+}
+
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.nav-active {
+	transform: translate(0%);
 }
